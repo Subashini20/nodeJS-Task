@@ -1,0 +1,22 @@
+{ "articles" : [{
+  "Id": 1,
+  "title" : "The Brightening star",
+  "content": "Motivational",
+  "category": "General"
+}, {
+  "Id": 2,
+  "title" : "Travel to Moon",
+  "content": "Experience",
+  "category": "Travel"
+}, {
+  "Id": 3,
+  "title" : "Hungry Peoplr",
+  "content": "Food",
+  "category": "Food"
+}, {
+  "Id": 4,
+  "title" : "The rise of technology",
+  "content": "Technology",
+  "category": "General"
+}]
+}
