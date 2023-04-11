@@ -8,7 +8,7 @@ const url = require('url');
 const filePath = path.join(__dirname,'db.json');
 
 const server = http.createServer()
-const handleRequests = new EventEmitter(); // creating a event emitter instance for "handleRequests"
+const handleRequests = new EventEmitter();
 
 handleRequests.on('GET:articles', (req, res) => {
   fs.readFile(filePath, 'utf8', (err, data) => {
