@@ -67,7 +67,7 @@ handleRequests.on('searchArticle', (req, res) => {
 const request_url = new URL(`http://localhost/5000/${req.url}`);
 const search_id = request_url.searchParams;
 
-fs.readFileSync(filePath, 'utf8', (data) => {
+let data = fs.readFileSync(filePath, 'utf8)
   if(search_id.has('id')) {
   let filter_data = data.filter((user) => user.id == id)
   if(filter_data == ''){
@@ -79,7 +79,7 @@ fs.readFileSync(filePath, 'utf8', (data) => {
       res.end()
 
     }
-  }})
+  }
 })
 // Delete article using the id
 handleRequests.on('deleteArticle', (req, res) => {
@@ -87,7 +87,7 @@ handleRequests.on('deleteArticle', (req, res) => {
 const request_url = new URL(`http://localhost/5000/${req.url}`);
 const search_id = request_url.searchParams;
 
-fs.readFileSync(filePath, 'utf8', (err, data) => {
+let data = fs.readFileSync(filePath, 'utf8)
   if(search_id.has('id')) {
   let filter_data = data.filter((user) => user.id != id)
   fs.writeFile(filePath, JSON.stringify(filter_data), (err) => {
@@ -99,7 +99,7 @@ fs.readFileSync(filePath, 'utf8', (err, data) => {
       res.end()
     }
   })
-  }})
+  }
 })
 server.on('request', (req, res) => {
  request_url_method= `${req.method}:${req.url}`;
